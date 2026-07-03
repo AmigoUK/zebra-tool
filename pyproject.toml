@@ -1,6 +1,6 @@
 [project]
 name = "zebra-tool"
-version = "0.9.0"
+version = "0.10.0"
 description = "Terminal-based discovery tool for Zebra printers on a LAN (ZD421, ZD621, ZT411, and more)"
 readme = "README.md"
 authors = [
