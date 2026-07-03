@@ -1,0 +1,31 @@
+[project]
+name = "zebra-tool"
+version = "0.1.0"
+description = "Terminal-based discovery tool for Zebra printers on a LAN (ZD421, ZD621, ZT411, and more)"
+readme = "README.md"
+authors = [
+    { name = "AmigoUK", email = "lewandowski.tl@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "textual>=0.50",
+    "pysnmp-lextudio>=4.4",
+    "zeroconf>=0.131",
+    "ifaddr>=0.2",
+]
+
+[project.scripts]
+zebra-tool = "zebra_tool.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.11.3,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
